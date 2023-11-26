@@ -1,6 +1,6 @@
 //
 //  ShareBase64Module.swift
-//  gid
+//  
 //
 //  Created by Илья  on 20.10.2022.
 //
@@ -31,10 +31,10 @@ class ShareBase64Module: NSObject {
       
        print(documentsURL)
       
-      self.share(link: documentsURL)
+      self.openModal(link: documentsURL)
   }
   
-  private func share(link: URL) {
+  private func openModal(link: URL) {
       let objectsToShare = [link]
       let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
       let rootViewController = UIApplication.shared.windows.first!.rootViewController!
